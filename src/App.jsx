@@ -369,32 +369,19 @@ export default function App() {
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="hero">
      <div className="top-links">
-  <a
-    href="/Murali_Revuri_AI_Engineer.pdf"
-    download
-  >
+  <a href="/Murali_Revuri_AI_Engineer.pdf" download>
     Download CV ↗
   </a>
-
-  <a
-    href="https://github.com/muralirevuri07-boop"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href="/research">
+    Research ↗
+  </a>
+  <a href="https://github.com/muralirevuri07-boop" target="_blank" rel="noopener noreferrer">
     GitHub ↗
   </a>
-
-  <a
-    href="https://linkedin.com/in/muralirevuri"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href="https://linkedin.com/in/murali-revuri" target="_blank" rel="noopener noreferrer">
     LinkedIn ↗
   </a>
-
-  <a
-    href="mailto:muralirevuri07@gmail.com"
-  >
+  <a href="mailto:muralirevuri07@gmail.com">
     Email ↗
   </a>
 </div>
@@ -456,7 +443,7 @@ export default function App() {
             <span className="eyebrow">About</span>
             <p>4 years in account management. Then I decided to build AI systems instead of managing accounts.</p>
             <p>No bootcamp. No CS degree. Just building, deploying, and shipping — one agent at a time.</p>
-            <p>Based in Hyderabad. Looking for AI engineering roles in London. Visa sponsorship required.</p>
+            <p>Based in Hyderabad, India.</p>
           </div>
           <div className="about-right rv" style={{transitionDelay:'0.12s'}}>
             <div className="tl">
