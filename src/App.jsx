@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+﻿import { useEffect, useRef, useState, useCallback } from 'react'
 import './App.css'
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -87,7 +87,7 @@ function Loader({ onDone }) {
     { text: '> connecting LangGraph orchestrator ... [OK]', delay: 800 },
     { text: '> RAG memory online ... 1247 embeddings loaded', delay: 1200 },
     { text: '> Groq inference engine ... 3ms latency', delay: 1600 },
-    { text: '> 3 production systems online', delay: 2000 },
+    { text: '> 4 production systems online', delay: 2000 },
     { text: '> 11 global markets monitored', delay: 2300 },
     { text: '> all agents operational ✓', delay: 2700 },
     { text: '> launching portfolio ...', delay: 3100 },
@@ -276,7 +276,7 @@ function MagText({ children, className }) {
    TICKER — horizontal scrolling tech stack
 ══════════════════════════════════════════════════════════════════════════════ */
 function Ticker() {
-  const items = ['LangGraph','Groq Llama 3.3','FastAPI','React','TypeScript','ChromaDB','Tavily','RAG','LangChain','PostgreSQL','Three.js','LangSmith','Vercel','Render','Python 3.11','Docker','Pinecone','OpenAI','Mistral','Streamlit']
+  const items = ['LangGraph','Groq Llama 3.3','FastAPI','React','TypeScript','ChromaDB','Tavily','RAG','LangChain','PostgreSQL','Three.js','LangSmith','Vercel','Render','Python 3.11','Docker','Pinecone','OpenAI','Mistral','Streamlit','LiveKit Agents','Deepgram']
   const doubled = [...items, ...items]
   return (
     <div className="ticker-wrap">
@@ -358,6 +358,13 @@ export default function App() {
       link: 'https://lexai-legal-negotiator.streamlit.app',
       accent: '#a78bfa',
     },
+    {
+      name: 'Chorus',
+      desc: 'Multi-agent voice AI receptionist that answers real phone calls 24/7. A caller talks to a live voice agent that verifies identity, books appointments, takes messages, and hands off between specialist agents mid-call without the caller ever noticing. Any business can sign up and get a branded line running in minutes.',
+      tech: ['LiveKit Agents','Deepgram','Groq','FastAPI','PostgreSQL','Render'],
+      link: 'https://chorus-backend-ou7i.onrender.com',
+      accent: '#1a73e8',
+    },
   ]
 
   return (
@@ -425,7 +432,7 @@ export default function App() {
       <section className="s" id="work">
         <div className="s-head rv">
           <span className="eyebrow">Selected Work</span>
-          <h2 className="s-title">Three systems.<br/>All deployed.<br/>All working.</h2>
+          <h2 className="s-title">Four systems.<br/>All deployed.<br/>All working.</h2>
         </div>
         <div className="cards">
           {projects.map((p,i) => (
@@ -450,7 +457,7 @@ export default function App() {
               <div className="tl-item"><span>2020–2024</span><p>Account Management</p></div>
               <div className="tl-item"><span>Late 2024</span><p>Started building AI agents</p></div>
               <div className="tl-item"><span>2025</span><p>First multi-agent system deployed</p></div>
-              <div className="tl-item active"><span>2026</span><p>3 production AI systems deployed</p></div>
+              <div className="tl-item active"><span>2026</span><p>4 production AI systems deployed</p></div>
             </div>
           </div>
         </div>
