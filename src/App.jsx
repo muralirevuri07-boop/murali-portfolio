@@ -87,7 +87,7 @@ function Loader({ onDone }) {
     { text: '> connecting LangGraph orchestrator ... [OK]', delay: 800 },
     { text: '> RAG memory online ... 1247 embeddings loaded', delay: 1200 },
     { text: '> Groq inference engine ... 3ms latency', delay: 1600 },
-    { text: '> 4 production systems online', delay: 2000 },
+    { text: '> 5 production systems online', delay: 2000 },
     { text: '> 11 global markets monitored', delay: 2300 },
     { text: '> all agents operational ✓', delay: 2700 },
     { text: '> launching portfolio ...', delay: 3100 },
@@ -276,7 +276,7 @@ function MagText({ children, className }) {
    TICKER — horizontal scrolling tech stack
 ══════════════════════════════════════════════════════════════════════════════ */
 function Ticker() {
-  const items = ['LangGraph','Groq Llama 3.3','FastAPI','React','TypeScript','ChromaDB','Tavily','RAG','LangChain','PostgreSQL','Three.js','LangSmith','Vercel','Render','Python 3.11','Docker','Pinecone','OpenAI','Mistral','Streamlit','LiveKit Agents','Deepgram']
+  const items = ['LangGraph','Groq Llama 3.3','FastAPI','React','TypeScript','ChromaDB','Tavily','RAG','LangChain','PostgreSQL','Three.js','LangSmith','Vercel','Render','Python 3.11','Docker','Pinecone','OpenAI','Mistral','Streamlit','LiveKit Agents','Deepgram','MCP','Playwright']
   const doubled = [...items, ...items]
   return (
     <div className="ticker-wrap">
@@ -337,6 +337,13 @@ export default function App() {
   useReveal()
 
   const projects = [
+    {
+      name: 'Aegis',
+      desc: 'The trust layer between AI agents and the real world. Every action an agent proposes is allowed, held for a human, or blocked before it runs. Approved actions execute exactly once, agents can never approve themselves, and every decision lands in a hash-chained audit log. Approval teams, auto-pause for misbehaving agents, Claude (MCP) + LangGraph + CrewAI integration. 16 live test suites, 3 ms decisions. Live demo: pick a role, no sign-up.',
+      tech: ['FastAPI','React','TypeScript','MCP','SQLite','Alembic','Playwright','Docker','Render'],
+      link: 'https://aegis-demo-r960.onrender.com/app/',
+      accent: '#8fb3ff',
+    },
     {
       name: 'Enterprise AI OS',
       desc: '8 specialized agents running as an autonomous business OS. CEO agent delegates to Research, Sales, Finance, Marketing, Operations, Web Intelligence & Memory. Live Mission Control UI with SVG agent network graph.',
@@ -432,7 +439,7 @@ export default function App() {
       <section className="s" id="work">
         <div className="s-head rv">
           <span className="eyebrow">Selected Work</span>
-          <h2 className="s-title">Four systems.<br/>All deployed.<br/>All working.</h2>
+          <h2 className="s-title">Five systems.<br/>All deployed.<br/>All working.</h2>
         </div>
         <div className="cards">
           {projects.map((p,i) => (
@@ -457,7 +464,7 @@ export default function App() {
               <div className="tl-item"><span>2020–2024</span><p>Account Management</p></div>
               <div className="tl-item"><span>Late 2024</span><p>Started building AI agents</p></div>
               <div className="tl-item"><span>2025</span><p>First multi-agent system deployed</p></div>
-              <div className="tl-item active"><span>2026</span><p>4 production AI systems deployed</p></div>
+              <div className="tl-item active"><span>2026</span><p>5 AI systems deployed, incl. Aegis</p></div>
             </div>
           </div>
         </div>
@@ -476,7 +483,7 @@ export default function App() {
 </a>
           <div className="contact-social">
             <a href="https://github.com/muralirevuri07-boop" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com/in/muralirevuri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://linkedin.com/in/murali-revuri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </section>
