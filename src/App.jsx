@@ -409,11 +409,6 @@ export default function App() {
             {' '}
             <MagText>Revuri</MagText>
           </h1>
-          <p className="hero-tagline rv" style={{transitionDelay:'0.15s'}}>
-  I build agents that build systems.<br/>
-  <span>Not demos. Production.</span>
-</p>
-
 <div className="hero-tech rv" style={{transitionDelay:'0.2s'}}>
   Python • LangGraph • FastAPI • React • RAG • PostgreSQL • OpenAI
 </div>
