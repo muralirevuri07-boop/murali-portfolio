@@ -132,6 +132,14 @@ function OrbCanvas() {
     const onMove = e => { mouse.current = { x: e.clientX, y: e.clientY } }
     window.addEventListener('mousemove', onMove)
 
+    const onScroll = () => {
+      const h = window.innerHeight
+      const k = Math.min(1, Math.max(0, (window.scrollY - h * 0.5) / (h * 0.6)))
+      if (c.parentElement) c.parentElement.style.opacity = String(1 - 0.6 * k)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+
     const pts = Array.from({ length: 280 }, () => ({
       theta: Math.random() * Math.PI * 2,
       phi:   Math.acos(2 * Math.random() - 1),
@@ -149,7 +157,7 @@ function OrbCanvas() {
       ctx.clearRect(0, 0, W, H)
 
       const cx = W / 2, cy = H / 2
-      const R  = Math.min(W, H) * 0.38
+      const R  = Math.min(W, H) * 0.50
       const mx = mouse.current.x - c.getBoundingClientRect().left
       const my = mouse.current.y - c.getBoundingClientRect().top
       const dst = Math.hypot(mx - cx, my - cy)
@@ -240,7 +248,7 @@ function OrbCanvas() {
     }
 
     draw()
-    return () => { cancelAnimationFrame(raf.current); ro.disconnect(); window.removeEventListener('mousemove', onMove) }
+    return () => { cancelAnimationFrame(raf.current); ro.disconnect(); window.removeEventListener('mousemove', onMove); window.removeEventListener('scroll', onScroll) }
   }, [])
 
   return <canvas ref={cvs} className="orb-canvas" />
